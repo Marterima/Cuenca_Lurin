@@ -29,6 +29,7 @@
         <script src="js/qgis2web_expressions.js"></script>
         <script src="./mapbox/mapbox-gl.js"></script>
         <script src="js/leaflet-measure.js"></script>
+        <script src="js/L.Control.Locate.min.js"></script>
         <script src="js/proj4.js"></script>
         <script src="js/proj4leaflet.js"></script>
         <script src="js/leaflet.markercluster.js"></script>
@@ -55,11 +56,7 @@ map.addControl(new mapboxgl.AttributionControl({
 
 map.on('click', 'lyr_CuencaLurn_1_0', function (e) {
     var description = '<table>\
-                    <tr>\
-                        <th scope="row">ID</th>\
-                        <td>' + (e.features[0].properties['OBJECTID_1'] !== null ? Autolinker.link(e.features[0].properties['OBJECTID_1'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
-                    <tr>\
+                   <tr>\
                         <th scope="row">Código</th>\
                         <td>' + (e.features[0].properties['CODIGO'] !== null ? Autolinker.link(e.features[0].properties['CODIGO'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
                     </tr>\
