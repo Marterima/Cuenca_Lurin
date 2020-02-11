@@ -68,14 +68,6 @@ map.on('click', 'lyr_CuencaLurn_1_0', function (e) {
                         <th scope="row">Área (Km2)</th>\
                         <td>' + (e.features[0].properties['AREA_KM2'] !== null ? Autolinker.link(e.features[0].properties['AREA_KM2'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <th scope="row">Perímetro</th>\
-                        <td>' + (e.features[0].properties['SHAPE_Length'] !== null ? Autolinker.link(e.features[0].properties['SHAPE_Length'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Área</th>\
-                        <td>' + (e.features[0].properties['SHAPE_Area'] !== null ? Autolinker.link(e.features[0].properties['SHAPE_Area'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
                 </table>'
 
     new mapboxgl.Popup()
@@ -96,14 +88,6 @@ map.on('mouseleave', 'lyr_CuencaLurn_1_0', function () {
 map.on('click', 'lyr_UnidadesFiscalizablesMinera_2_0', function (e) {
     var description = '<table>\
                     <tr>\
-                        <th scope="row">ID</th>\
-                        <td>' + (e.features[0].properties['OBJECTID'] !== null ? Autolinker.link(e.features[0].properties['OBJECTID'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Área (Km2)</th>\
-                        <td>' + (e.features[0].properties['AREA_KM2'] !== null ? Autolinker.link(e.features[0].properties['AREA_KM2'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Cód. Unidad</th>\
                         <td>' + (e.features[0].properties['COD_UF'] !== null ? Autolinker.link(e.features[0].properties['COD_UF'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
                     </tr>\
@@ -112,12 +96,8 @@ map.on('click', 'lyr_UnidadesFiscalizablesMinera_2_0', function (e) {
                         <td>' + (e.features[0].properties['UNIDAD_FISCALIZABLE'] !== null ? Autolinker.link(e.features[0].properties['UNIDAD_FISCALIZABLE'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Perímetro</th>\
-                        <td>' + (e.features[0].properties['Shape_Length'] !== null ? Autolinker.link(e.features[0].properties['Shape_Length'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Área</th>\
-                        <td>' + (e.features[0].properties['Shape_Area'] !== null ? Autolinker.link(e.features[0].properties['Shape_Area'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                        <th scope="row">Área (Km2)</th>\
+                        <td>' + (e.features[0].properties['AREA_KM2'] !== null ? Autolinker.link(e.features[0].properties['AREA_KM2'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
                     </tr>\
                 </table>'
 
@@ -138,10 +118,6 @@ map.on('mouseleave', 'lyr_UnidadesFiscalizablesMinera_2_0', function () {
 });
 map.on('click', 'lyr_CentrosPobaldos_3_0', function (e) {
     var description = '<table>\
-                    <tr>\
-                        <th scope="row">ID</th>\
-                        <td>' + (e.features[0].properties['OBJECTID'] !== null ? Autolinker.link(e.features[0].properties['OBJECTID'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
-                    </tr>\
                     <tr>\
                         <th scope="row">Centro Poblado</th>\
                         <td>' + (e.features[0].properties['NOMBCCPP'] !== null ? Autolinker.link(e.features[0].properties['NOMBCCPP'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
